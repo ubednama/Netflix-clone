@@ -4,13 +4,17 @@ import cookieParser from "cookie-parser";
 import dbConnection from "./db/db.connection.js";
 import userRoutes from "./routes/userRoutes.js";
 import dotenv from "dotenv";
+import path from "path";
 
+const envPath = path.resolve(process.cwd(), "../.env");
+console.log("Resolved .env path:", envPath);
 
-dotenv.config()
+dotenv.config({ path: envPath });
+
 dbConnection();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 // console.log("from index", process.env.MONOGO_URL)
 
 app.use(express.urlencoded({extended:true}))
@@ -29,6 +33,9 @@ app.use("/api/v1/user", userRoutes);
 app.get("/", (req, res) => {
     res.send("hello world")
 })
+
+console.log("PORT:", process.env.PORT);
+console.log("MONOGO_URL:", process.env.MONOGO_URL);
 
 
 app.listen(PORT, ()=> {
