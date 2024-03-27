@@ -37,46 +37,51 @@ This is a Netflix clone project built using the MERN stack (MongoDB, Express.js,
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/netflix-clone.git```
-   Navigate to the project directory:
+   git clone https://github.com/yourusername/netflix-clone.git
+   ```
+    Navigate to the project directory:
 
     ```bash
-    cd netflix-clone```
+    cd netflix-clone
+    ```
     Install dependencies for the server:
 
-bash
-npm install
-Navigate to the client directory:
+    ```bash
+    npm install
+    ```
+    Navigate to the client directory:
 
-bash
-cd client
-Install dependencies for the client:
+    ```bash
+    cd client
+    ```
+    Install dependencies for the client:
 
-bash
-npm install
-Set up environment variables:
+    ```bash
+    npm install
+    ```
+    Set up environment variables:
 
-Create a .env file in the root of the project.
-Define environment variables such as MONGO_URI, JWT_SECRET, etc.
-Start the development server:
+    Create a .env file in the root of the project.
+    Define environment variables such as MONGO_URI, JWT_SECRET, etc.
+    Start the development server:
 
-bash
-npm run dev
-Open your browser and navigate to http://localhost:3000 to view the application.
+    ```bash
+    npm run dev
+    ```
+    Open your browser and navigate to http://localhost:3000 to view the application.
 
-Usage
-Register an account or log in if you already have one.
-Browse through the collection of movies and TV shows.
-Use the search functionality to find specific titles.
-Add movies and TV shows to your watchlist.
-Customize your profile settings and preferences.
-Enjoy streaming your favorite content!
-Contributing
+## Usage
+Register an account or log in if you already have one.<br/>
+Browse through the collection of movies and TV shows.<br/>
+Use the search functionality to find specific titles.<br/>
+Add movies and TV shows to your watchlist.<br/>
+Customize your profile settings and preferences.<br/>
+Enjoy streaming your favorite content!<br/>
+
+## Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request for any improvements or new features you'd like to see added to the project.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-arduino
 
 You can customize and expand upon this template based on the specific features, technologies, and setup of your Netflix clone project.
