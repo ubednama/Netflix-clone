@@ -28,6 +28,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// This route should be the last route, serving your React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+});
+
+
 app.use("/api/v1/user", userRoutes);
 
 app.get("/", (req, res) => {
