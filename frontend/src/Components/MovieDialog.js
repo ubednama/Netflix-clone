@@ -33,8 +33,10 @@ export default function MovieDialog() {
 
   const [dialogWidth, setDialogWidth] = React.useState(window.innerWidth);
   const [dialogHeight, setDialogHeight] = React.useState(window.innerHeight);
-  const videoWidth = Math.max(dialogWidth, dialogHeight * (16 / 9));
-  const videoHeight = Math.max(dialogHeight, dialogWidth * (9 / 16));
+
+  // Calculate video dimensions
+  const videoWidth = Math.max(dialogWidth * 0.8, dialogHeight * (16 / 9)); // Set max width to 80% of dialog width
+  const videoHeight = Math.max(dialogHeight * 0.9, dialogWidth * (9 / 16)); // Set min height to 90% of dialog height
 
   return (
     <React.Fragment>
@@ -46,9 +48,9 @@ export default function MovieDialog() {
         PaperProps={{
           ref: dialogRef,
           style: {
-            // width: "100vw", // Set width to full viewport width
-            // height: "100vh", // Set height to full viewport height
-            maxWidth: dialogHeight * (16 / 9), // Set maxWidth instead of width
+            // maxWidth: dialogWidth * 0.8, // Set max width to 80% of viewport width
+            // height: '90vh', // Set height to 90% of viewport height
+            width: "90vw",
             margin: 0,
             display: 'flex',
             flexDirection: 'column',
@@ -56,10 +58,10 @@ export default function MovieDialog() {
           }
         }}
       >
-        <DialogActions >
+        <DialogActions>
           <Button onClick={handleClose}><RxCross2 color='black'/></Button>
         </DialogActions>
-        <DialogContent className=' overflow-hidden '>
+        <DialogContent className='overflow-hidden'>
           <VideoBackground className="w-[80%]" movieId={movie?.id} bool={true} height={videoHeight} width={videoWidth} />
           <DialogContentText id="alert-dialog-description">
             <b>{movie?.title}<br/></b>
