@@ -11,12 +11,12 @@ const useMovieById = async (movieId) => {
     const getMovieById = async() => {
       try {
         const res = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/videos`, options);
-        console.log("from useMovieId ",res.data.results)
+        // console.log("from useMovieId ",res.data.results)
         const trailer = res?.data?.results?.filter((item)=>{
             return item.type === "Trailer"
         })
         dispatch(getMovieTrailer(trailer.length > 0 ? trailer[0] : res.data.results[0]))
-        console.log("trailer",trailer)
+        // console.log("trailer",trailer)
       } catch (error) {
         console.log("Error while fetching movie video: ",error)
       }

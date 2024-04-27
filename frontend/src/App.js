@@ -3,6 +3,7 @@ import {Toaster} from "react-hot-toast";
 import MovieDialog from "./Components/MovieDialog";
 
 function App() {
+    console.log(process.env.AUTH)
   return (
     <div>
       <Body/>

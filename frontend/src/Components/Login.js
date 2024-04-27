@@ -48,9 +48,9 @@ const Login = () => {
                 // console.log(res);
                 if(res.data.success){
                     toast.success(res.data.message)
-                    console.log("tt",res.data.message)
+                    // console.log("tt",res.data.message)
                 }
-                console.log(res.data)
+                // console.log(res.data)
                 dispatch(setUser(res.data.user));
                 navigate("/browse");
             } catch (error) {

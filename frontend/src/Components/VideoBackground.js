@@ -7,7 +7,7 @@ const VideoBackground = ({movieId, bool}) => {
   useMovieById(movieId);
 
   const trailer = useSelector(store=>store.movie.movieTrailer)
-  console.log("from videoBG ",trailer, movieId)
+  // console.log("from videoBG ",trailer, movieId)
 
   const trailerKey = trailer && trailer.key ? trailer.key : '';
 

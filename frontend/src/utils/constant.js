@@ -5,7 +5,7 @@ export const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZjM4Zjc1MDAxNTIxYjFmYTMzYjA4YjIxMmNiNzAxZCIsInN1YiI6IjY1ZmI2ZDMwNzcwNzAwMDE2MzA2Nzk3YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.J1xjDmpMxvBE3918i5aNfqRJ3BYEW3avBLi5Gv4W40w'
+      Authorization: process.env.AUTH
     }
 };
 
