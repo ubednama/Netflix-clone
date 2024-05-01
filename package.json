@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ubednama.github.io/Netflix-clone",
   "name": "backend",
   "version": "1.0.0",
   "description": "",
@@ -7,6 +8,8 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "start": "node backend/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
@@ -21,5 +24,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.2",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
